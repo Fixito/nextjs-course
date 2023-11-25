@@ -54,7 +54,7 @@ export default async function page({ params }: { params: { id: string } }) {
         src={imgSrc}
         width={300}
         height={300}
-        className="mb-4 h-48 w-48 rounded-lg shadow-lg"
+        className="mb-4 h-48 w-full rounded-lg object-cover shadow-lg sm:w-48"
         alt={title}
         priority
       />
