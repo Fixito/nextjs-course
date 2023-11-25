@@ -1,11 +1,10 @@
 import Link from "next/link.js";
 
 const links = [
-  { id: 1, label: "accueil", href: "/" },
-  { id: 3, label: "client", href: "/client" },
-  { id: 4, label: "boissons", href: "/drinks" },
-  { id: 5, label: "requête", href: "/query" },
-  { id: 6, label: "tâches", href: "/tasks" },
+  { id: 1, label: "client", href: "/client" },
+  { id: 2, label: "boissons", href: "/drinks" },
+  { id: 3, label: "prisma", href: "/prisma-example" },
+  { id: 4, label: "tâches", href: "/tasks" },
 ];
 
 export default function Navbar() {
