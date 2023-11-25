@@ -6,6 +6,7 @@ export const metadata: Metadata = {
 };
 
 const prismaHandlers = async () => {
+  console.log("Exemple Prisma");
   // await prisma.task.create({
   //   data: { content: "Apprendre Next.js" },
   // });
