@@ -2,7 +2,7 @@
 
 import { createTask, type State } from "@/utils/action";
 import { useFormStatus, useFormState } from "react-dom";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { toast } from "react-hot-toast";
 
 const SubmitBtn = () => {
@@ -23,6 +23,7 @@ const initialState: State = { message: null, errors: {} };
 
 export default function TaskForm() {
   const [state, formAction] = useFormState(createTask, initialState);
+  const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     // if (state.message === "error") {
@@ -30,12 +31,13 @@ export default function TaskForm() {
     // }
 
     if (state.message === "success") {
+      formRef.current?.reset();
       toast.success("Tâche créée");
     }
   }, [state]);
 
   return (
-    <form action={formAction}>
+    <form action={formAction} ref={formRef}>
       <div className="join w-full">
         <input
           type="text"
