@@ -2,6 +2,8 @@ import TaskForm from "@/components/TaskForm";
 import TaskList from "@/components/TaskList";
 import { Metadata } from "next";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Tâches | Next.js Tutoriel",
 };
